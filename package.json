@@ -6,6 +6,9 @@
   "engine": {
     "node": ">=4.0.0"
   },
+  "scripts": {
+    "test": "./node_modules/.bin/ava"
+  },
   "bin": {
     "beg": "index.js"
   },
@@ -32,5 +35,10 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "random-tree-names": "^3.0.5"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "mock-fs": "^4.4.2",
+    "rewire": "^3.0.1"
   }
 }
