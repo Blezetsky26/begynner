@@ -7,13 +7,23 @@ const chalk = require('chalk')
 const names = require('random-tree-names')
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 
-const successLog = text => `${chalk.green("✔︎")} ${text}`
+const successLog = text => text ?
+	`${chalk.green("✔︎")} ${text}` :
+	`Function ${successLog.name} missing parameter Text`
 
 const readFile = file => fs.readFileSync(file, 'utf8')
 
 const createFolder = folder => {
-	fs.mkdirSync(folder)
-	return `${folder} folder created!`
+	let result;
+
+	if (folder) {
+		fs.mkdirSync(folder)
+		result = `${folder} folder created!`
+	} else {
+		result = `Function ${createFolder.name} missing parameter Folder`
+	}
+
+	return result;
 }
 
 const createFile = (folder, file, content) => {

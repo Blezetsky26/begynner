@@ -1,13 +1,13 @@
 {
   "name": "begynner",
   "version": "2.0.0",
-  "description": "A boilerplate to kickstart new nodejs packages or experiences",
+  "description": "A boilerplate to kickstart new nodejs packages or experiences.",
   "main": "index.js",
   "engine": {
     "node": ">=4.0.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/ava"
+    "test": "./node_modules/.bin/ava --verbose"
   },
   "bin": {
     "beg": "index.js"
